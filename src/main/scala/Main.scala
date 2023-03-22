@@ -10,8 +10,8 @@ import scala.collection.mutable.ListBuffer
   def evidencePrinter(evs: ListBuffer[Evidence]): Unit = {
     var table: t2.TableBuilder = t2
       .TableBuilder()
-      .add("ID", "Severity", "Description")
-    evs.foreach(e => table.add(e._1, e._2, e._3))
+      .add("ID", "Platform", "Severity", "Description")
+    evs.foreach(e => table.add(e._1, e._2, e._3, e._4))
 
     var writer = t2.TableWriter(
       "ansiColorEnabled" -> "true",
@@ -30,10 +30,11 @@ import scala.collection.mutable.ListBuffer
 
   def desugarToEvidence(el: Seq[String]): Evidence = {
     val id = el(0)
+    val platform = el(3)
     val severity = el(9)
     val desc = el(10)
 
-    val ev = Evidence(id, severity, desc)
+    val ev = Evidence(id, platform, severity, desc)
 
     evidences += ev
     ev
@@ -45,5 +46,5 @@ import scala.collection.mutable.ListBuffer
     .iterator
     .drop(1)
 
-  val foo = reader.take(9).foreach(desugarToEvidence)
+  val foo = reader.filter(x => x.contains("WEB")).foreach(desugarToEvidence)
   evidencePrinter(evidences)
