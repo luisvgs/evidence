@@ -9,6 +9,7 @@ lazy val root = project
     libraryDependencies ++= Seq(
       "org.scalameta" %% "munit" % "0.7.29" % Test,
       "com.github.tototoshi" %% "scala-csv" % "1.3.10",
-      "com.github.losizm" %% "t2" % "2.0.0"
+      "com.github.losizm" %% "t2" % "2.0.0",
+      "com.lihaoyi" %% "fansi" % "0.4.0"
     )
   )
