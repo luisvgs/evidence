@@ -54,5 +54,5 @@ import scala.collection.mutable.ListBuffer
     .iterator
     .drop(1)
 
-  val foo = reader.filter(x => x.contains("WEB")).foreach(desugarToEvidence)
+  reader.filter(x => x.contains("WEB")).foreach(desugarToEvidence)
   evidencePrinter(evidences)
