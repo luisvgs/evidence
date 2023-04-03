@@ -8,3 +8,9 @@ Usually QA reports bugs and software malfunctions in a big spreadsheet via Googl
 ### The solution
 
 Evidence is a small tool that allows you to keep track of QA latests reports without leaving the terminal. So far it only serves for my personal purposes, but is intended to be a general purpose piece of software.
+
+### Try it yourself
+
+```
+git clone https://github.com/luisvgs/evidence.git && cd evidence && sbt run
+```
