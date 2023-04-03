@@ -15,7 +15,6 @@ project/local-plugins.sbt
 .ensime_cache/
 .sbt-scripted/
 local.sbt
-
 # Bloop
 .bsp
 
@@ -26,6 +25,9 @@ local.sbt
 .bloop/
 .metals/
 metals.sbt
+
+
+src/main/resources/data.csv
 
 # IDEA
 .idea
