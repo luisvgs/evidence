@@ -27,7 +27,7 @@ local.sbt
 metals.sbt
 
 
-*.csv
+src/main/resources/*.csv
 
 # IDEA
 .idea
