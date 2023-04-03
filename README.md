@@ -1,8 +1,10 @@
-## sbt project compiled with Scala 3
+# Evidence
 
-### Usage
+![Image](evidence_example.png)
 
-This is a normal sbt project. You can compile code with `sbt compile`, run it with `sbt run`, and `sbt console` will start a Scala 3 REPL.
+### The problem
+Usually QA reports bugs and software malfunctions in a big spreadsheet via Google Drive, describing: platform, current released version and bug severity. That require us scrolling up and down or updating the document to check if any new issue has been reported yet. 
 
-For more information on the sbt-dotty plugin, see the
-[scala3-example-project](https://github.com/scala/scala3-example-project/blob/main/README.md).
+### The solution
+
+Evidence is a small tool that allows you to keep track of QA latests reports without leaving the terminal. So far it only serves for my personal purposes, but is intended to be a general purpose piece of software.
